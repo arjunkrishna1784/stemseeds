@@ -1,36 +1,63 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# STEMSeeds
 
-## Getting Started
+A responsive website for a student-led STEM education initiative, helping visitors explore hands-on experiment kits, meet the team, and get involved.
 
-First, run the development server:
+**[Visit the website](https://stemseeds.vercel.app)**
+
+## Features
+
+- Animated wordmark, floating photography, and parallax interactions.
+- Dedicated pages for STEM kits, the team, the initiative, joining, and donations.
+- Experiment descriptions and educational resources.
+- Reusable UI components and centralized content configuration.
+- Responsive hero layouts and reduced-motion handling.
+
+## Engineering
+
+Built with **Next.js 16, React 19, TypeScript, Tailwind CSS 4, and Motion**.
+
+Page composition lives in `app/`, reusable presentation lives in `components/`, and editable copy and structured data live in `content/`. This lets content updates happen without rewriting the page components.
+
+The home hero uses separate mobile and desktop photo arrangements. It reduces parallax sensitivity when the visitor requests reduced motion, and uses Next.js image components for its photographs.
+
+## Run locally
+
+Install Node.js 22 LTS and npm, then:
 
 ```bash
+git clone https://github.com/arjunkrishna1784/stemseeds.git
+cd stemseeds
+npm ci
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Open [localhost:3000](http://localhost:3000).
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+| Command | Purpose |
+| --- | --- |
+| `npm run dev` | Start the development server |
+| `npm run lint` | Run ESLint |
+| `npm run build` | Build for production |
+| `npm start` | Serve the production build |
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## Where to make changes
 
-## Learn More
+| Directory | Contents |
+| --- | --- |
+| `app/` | Routes, layout, and global styles |
+| `components/home/` | Home page sections |
+| `components/ui/` | Shared UI and animation components |
+| `content/` | Site copy, kit details, team information, and navigation |
+| `public/images/` | Photos and visual assets |
+| `hooks/`, `lib/` | Shared hooks and utilities |
 
-To learn more about Next.js, take a look at the following resources:
+Start with `content/site.ts` for site configuration, `content/kits.ts` for experiments, and `content/team.ts` for team information.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## Project role
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+Website development led by **Arjun Krishnamurthy**. STEMSeeds content and photographs belong to their respective creators.
 
-## Deploy on Vercel
+## Scope
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+This repository contains the website. Organization impact figures shown on the site describe STEMSeeds activities; they are not software usage or performance benchmarks.
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
